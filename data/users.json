@@ -1,0 +1,19 @@
+{
+  "users": [
+    {
+      "uid": "0",
+      "name": "Mick Hobbs",
+      "image": "https://bootdey.com/img/Content/avatar/avatar1.png"
+    },
+    {
+      "uid": "1",
+      "name": "Sam Smith",
+      "image": "https://bootdey.com/img/Content/avatar/avatar2.png"
+    },
+    {
+      "uid": "2",
+      "name": "Donna King",
+      "image": "https://bootdey.com/img/Content/avatar/avatar3.png"
+    }
+  ]
+}

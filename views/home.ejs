@@ -1,0 +1,140 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+        <!-- Carousel -->
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="2000">
+                    <img src="/images/vintage1.jpg" class="d-block w-100" alt="vanila and chocolate icecream">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Classic</h2>
+                        <p>Timeless elegance meets modern sophistication</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/vintage2.jpg" class="d-block w-100" alt="cookieAndCream">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Fearless</h2>
+                        <p>Dare to leap where others hesitate, be boldly fearless</p>
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="/images/vintage3.jpg" class="d-block w-100" alt="melted ice cream">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h2>Thrill-seeker</h2>
+                        <p>Life’s an adventure, savor the thrill of every moment</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="py-5">
+            <div class="container">
+                <div class="row text-center py-5">
+                    <div>
+                        <h1 class="title-font">WELCOME TO NORIMONO</h1>
+                    </div>
+                </div>
+                <div class="row text-center py-3">
+                    <div>
+                        <h4>WHERE WOULD YOU LIKE TO START?</h4>
+                    </div>
+                </div>
+
+                <div class="row mb-4 py-3">
+                    <div class="col-sm-4 col-12">
+                        <div class="card">
+                            <img src="/images/vintage1.jpg" class="img-fluid rounded-top" alt="Image 1">
+                            <div class="card-body">
+                                <h5 class="card-title">Find a Dealer</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="card">
+                            <img src="/images/vintage2.jpg" class="img-fluid rounded-top" alt="Image 2">
+                            <div class="card-body">
+                                <h5 class="card-title">Configure the dream bike</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-12">
+                        <div class="card">
+                            <img src="/images/vintage3.jpg" class="img-fluid rounded-top" alt="Image 3">
+                            <div class="card-body">
+                                <h5 class="card-title">Make an inquiry</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- Stories Section -->
+        <section id="image-text-section" class="py-5">
+            <div class="container-fluid text-center position-relative"
+                style="background-image: url(images/vintage4.jpg); background-size:cover; background-position: center; height:800px;">
+                <div
+                    class="position-absolute top-0 start-0 pt-5 w-100 d-flex justify-content-center align-items-center">
+                    <h1 class="title-font">STORY OF NORIMONO</h1>
+                </div>
+            </div>
+            <div class="container-fluid text-center position-relative">
+
+
+
+                <div class="row p-0">
+                    <div class="col-md-6 p-5">
+                        <img src="/images/vintage4.jpg" class="img-fluid " alt="Image 5">
+                    </div>
+                    <div class="col-md-6 p-5">
+                        <p class="fs-3 fw-light title-font">From 1960</p>
+                        <p>
+
+
+                        </p>
+                    </div>
+                </div>
+                <br>
+                <div class="row p-0">
+                    <div class="col-md-6 p-5">
+                        <p class="fs-3 fw-light title-font">From 1970</p>
+                        <p>
+
+
+                        </p>
+                    </div>
+
+                    <div class="col-md-6 p-5">
+                        <img src="/images/vintage4.jpg" class="img-fluid " alt="Image 5">
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <%- include('welcomeModal'); -%>
+
+        <%- include('footer'); -%>

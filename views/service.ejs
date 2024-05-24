@@ -1,0 +1,73 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+	<!-- Welcome Section -->
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Book A Service</h2>
+        <form>
+
+            <!-- Contact Details -->
+            <div class="row mb-4">
+                <h6 class="form-title">Contact Details</h6>
+
+                <div class="col-md-6 col-12">
+                    <label for="firstname" class="form-label">Firstname</label>
+                    <input type="text" class="form-control" id="firstname" required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="surname" class="form-label">Surname</label>
+                    <input type="text" class="form-control" id="surname" required>
+                </div>
+            </div>
+            <div class="row mb-4">
+				<div class="col-md-6 col-12">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="mobile" class="form-label">Mobile</label>
+                    <input type="tel" class="form-control" id="mobile" placeholder="+xxx xxxx xxx" pattern="[0-9]{10}"
+                        required>
+                </div>
+
+            </div>
+
+            <div class="row mb-4">
+				<div class="col-md-6 col-12">
+					<label for="state" class="form-label">Select A Service</label>
+					<select class="form-select" id="state" required>
+						<option value="" disabled selected>Test Ride</option>
+						<option value="ACT">Configuration Consultation</option>
+						<option value="NSW">Warranty & Insurance Consultation</option>
+					</select>
+				</div>
+				<div class="col-md-3 col-12">
+                    <label for="birthdate" class="form-label">Desired Date</label>
+                    <input type="date" class="form-control" id="birthdate" required>
+                </div>
+                <div class="col-md-3 col-12">
+                    <label for="birthdate" class="form-label">Desired Time</label>
+                    <input type="time" class="form-control" id="birthdate" required>
+                </div>
+			</div>
+
+
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <label for="message" class="form-label">Description</label>
+                    <textarea class="form-control" id="message" rows="8" ></textarea>
+        
+                </div>
+            </div>
+            <div class="row mb-4">
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Book</button>
+                    <button type="reset" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+            <%- include('footer'); -%>

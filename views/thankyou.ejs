@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+
+<header>
+    <div class="container-fluid bg-info-subtle mb-4">
+        <div class="col-sm-8 mx-auto text-center py-2">
+            <h1 class="display-4">World of Ice Cream</h1>
+            <p class="lead ">Feedback from ice cream lovers....</p>
+        </div>
+    </div>
+  </header>
+
+<main>
+  <div class="container">
+        <h2><%= title %></h2>
+
+      <h4>Thank You <%= name %>! for sending your feedback.</h4>
+      <p>Your favourite ice cream is <strong><%= icecreamtype %></strong>.</p>
+      <p>Your Rating is <strong><%= rating %></strong> out of 5!</p>
+      <p>Your Feedback: <strong><%= feedback %></strong></p>
+      <div class="mt-4 text-left">
+        <a href="/" class="btn btn-primary">Return to Form</a>
+      </div>
+  </div>
+</main>
+<%- include('footer'); -%>

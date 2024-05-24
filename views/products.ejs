@@ -1,0 +1,116 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+
+
+        <!-- Welcome Section -->
+        <section id="welcome-section" class="py-5">
+            <div class="container">
+                <div class="row text-center py-5">
+                    <div>
+                        <h1>Search your products</h1>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+
+        <section>
+            <div>
+                <form action="/product/search" method="post" id="">
+
+                    <div class="row mb-2">
+                        <div class="col-sm-1">
+
+                        </div>
+                        <label class="col-sm-2 col-form-label-sm text-sm-end" for="keyword">Keywords:</label>
+                        <div class="col-sm-5">
+                            <input type="text" class="form-control" id="keyword" placeholder="Enter a term to search"
+                                name="keyword" value="<%= typeof keyword !== 'undefined' ? keyword : '' %>">
+                        </div>
+                        <div class="col-sm-2">
+                            <button type="submit" class="btn btn-primary">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div><br><br>
+        </section>
+
+        <section>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="row">
+                        <% products.forEach((product, index)=> { %>
+                            <% if (index % 3===0 && index !==0) { %>
+                    </div>
+                    <div class="row">
+                        <% } %>
+                            <div class="col-md-4 mb-4">
+                                <div class="card h-100">
+                                    <img src="<%= product.image_src %>" class="z-index-1 original_image"
+                                        alt="<%= product.name %>" data-hover-src="<%= product.other_image_src %>">
+                                    <% if(product.other_image_src !="" ){ 
+                                        var firstimage = product.image_src; 
+                                        var id = product.id; 
+                                        var images = product.other_image_src.split("__"); 
+                                        %>
+
+                                        <%- include('carousel.ejs', { id: id, firstImage:firstimage, images: images}) %>
+
+                                            <% }%>
+          
+                                                <div class="card-body">
+                                                    <h5 class="card-title">
+                                                        <%= product.name %>
+                                                    </h5>
+                                                    <p class="card-text">
+                                                        <%= product.description %>
+                                                    </p>
+                                                    <p class="card-text"><strong>Stock:</strong>
+                                                        <%= product.stock %>
+                                                    </p>
+                                                    <p class="card-text"><strong>Price:</strong> $<%= product.price %>
+                                                    </p>
+                                                </div>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script>
+
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const cards = document.querySelectorAll('.card');
+                cards.forEach(card => {
+
+                    const original_image = card.querySelector('.original_image');
+                    const carousel_container = card.querySelector('.carousel_container');
+
+                    if (original_image.dataset.hoverSrc != undefined && original_image.dataset.hoverSrc != "") {
+                        var carouselInstance = new bootstrap.Carousel(carousel_container, {
+                            interval: 2000,
+                        });
+
+                        card.addEventListener('mouseover', () => {
+                            carouselInstance.cycle();
+                            original_image.style.display = "none";
+                            carousel_container.style.display = "block";
+                        });
+                        card.addEventListener('mouseout', () => {
+                            original_image.style.display = "block";
+                            carousel_container.style.display = "none"
+                        });
+                    }
+
+                });
+            });
+
+
+        </script>
+
+
+        <%- include('footer'); -%>

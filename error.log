@@ -1,0 +1,48 @@
+[2024-05-23T15:12:22.529Z] SQLITE_ERROR: no such column: login_cad
+Error: SQLITE_ERROR: no such column: login_cad
+--> in Database#get('SELECT * FROM user WHERE login_cad = ?', [ 'phong' ], [Function (anonymous)])
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\routes\userRoutes.js:27:8
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\routes\userRoutes.js:12:5
+
+[2024-05-23T15:12:50.057Z] SQLITE_ERROR: no such column: login_cd123
+Error: SQLITE_ERROR: no such column: login_cd123
+--> in Database#get('SELECT * FROM user WHERE login_cd123 = ?', [ 'phong' ], [Function (anonymous)])
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\routes\userRoutes.js:27:8
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:280:10)
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\routes\userRoutes.js:12:5
+
+[2024-05-24T06:41:34.762Z] SQLITE_ERROR: no such table: produsct
+Error: SQLITE_ERROR: no such table: produsct
+
+[2024-05-24T07:22:58.121Z] SQLITE_ERROR: no such table: productss
+Error: SQLITE_ERROR: no such table: productss
+--> in Database#all('SELECT * FROM productss WHERE keyword LIKE ?', [ '%%' ], [Function (anonymous)])
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\routes\productRoutes.js:23:8
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\ngtua\OneDrive\Documents\Deakin\Deakin_study\2024_T1\SIT774_Web_Technologies\week10_3\node_modules\express\lib\router\index.js:175:3)
+
+[2024-05-24T07:31:58.511Z] SQLITE_ERROR: no such table: products
+Error: SQLITE_ERROR: no such table: products
+
+[2024-05-24T07:42:42.753Z] SQLITE_ERROR: no such table: productc
+Error: SQLITE_ERROR: no such table: productc
+

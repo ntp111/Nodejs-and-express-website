@@ -1,0 +1,38 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+	<!-- Welcome Section -->
+	<section id="welcome-section" class="py-5">
+		<div class="container">
+			<div class="row text-center">
+				<div>
+					<h1>LATEST NEWS</h1>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Stories Section -->
+	<section id="image-text-section" class="py-5">
+		<div class="container-fluid p-0 position-relative">
+
+			<% news.forEach(item => { %>
+				<div class="row p-0 bg-dark-subtle">
+					<div class="col-md-3 p-2">
+						<img src="<%= item.image_src %>" class="rounded" width="95%" alt="Image">
+					</div>
+					<div class="col-md-9 p-4">
+						<p class="fs-3 fw-light"><%= item.title %></p>
+						<p><%= item.content %></p>
+					</div>
+				</div>
+				<div class="row p-0 bg-dark-subtle"><hr></div>
+			<% }); %>
+
+
+
+		</div>
+	</section>
+
+            <%- include('footer'); -%>

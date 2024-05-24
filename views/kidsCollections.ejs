@@ -1,0 +1,89 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+		<!-- Carousel -->
+		<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+					aria-label="Slide 2"></button>
+				<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+					aria-label="Slide 3"></button>
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item active" data-bs-interval="2000">
+					<img src="/images/kidCollection1.jpg" class="d-block w-100" alt="vanila and chocolate icecream">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Classic</h2>
+						<p>Timeless elegance meets modern sophistication</p>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="/images/kidCollection2.jpg" class="d-block w-100" alt="cookieAndCream">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Fearless</h2>
+						<p>Dare to leap where others hesitate, be boldly fearless</p>
+					</div>
+				</div>
+				<div class="carousel-item" data-bs-interval="2000">
+					<img src="/images/kidCollection3.jpg" class="d-block w-100" alt="melted ice cream">
+					<div class="carousel-caption d-none d-md-block">
+						<h2>Thrill-seeker</h2>
+						<p>Life’s an adventure, savor the thrill of every moment</p>
+					</div>
+				</div>
+			</div>
+			<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button>
+		</div>
+
+	<!-- Welcome Section -->
+	<section id="welcome-section" class="py-5">
+		<div class="container">
+			<div class="row text-center py-5">
+				<div>
+					<h1>KIDS' COLLECTION</h1>
+				</div>
+			</div>
+
+			<div class="row mb-4 py-3">
+				<div class="col-sm-4 col-12">
+					<div class="card">
+						<img src="/images/kidCollection1.jpg" class="img-fluid rounded" alt="Image 1">
+						<div class="card-body">
+							<h5 class="card-title">Gloves</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-12">
+					<div class="card">
+						<img src="/images/kidCollection2.jpg" class="img-fluid rounded" alt="Image 2">
+						<div class="card-body">
+							<h5 class="card-title">Helmets</h5>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4 col-12">
+					<div class="card">
+						<img src="/images/kidCollection3.jpg" class="img-fluid rounded" alt="Image 3">
+						<div class="card-body">
+							<h5 class="card-title">Jackets</h5>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+
+            <%- include('footer'); -%>

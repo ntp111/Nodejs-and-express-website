@@ -1,0 +1,62 @@
+<%- include('header'); -%>
+<%- include('navbar'); -%>
+
+<!-- Welcome Section -->
+<div class="container mt-5">
+    <h2 class="text-center mb-5">Send Inquiry</h2>
+
+    <% if (typeof error !== 'undefined') { %>
+        <div class="alert alert-danger" role="alert">
+            <%= error %>
+        </div>
+        <% } %>
+    
+        <% if (typeof success_msg !== 'undefined') { %>
+        <div class="alert alert-success" role="alert">
+            <%= success_msg %>
+        </div>
+        <% } %>
+
+    <form action="/service/contact" method="post">
+        <!-- Contact Details -->
+        <div class="row mb-4">
+            <h6 class="form-title">Contact Details</h6>
+
+            <div class="col-md-6 col-12">
+                <label for="firstname" class="form-label">name</label>
+                <input type="text" class="form-control" id="firstname" name="name" required>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-6 col-12">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-md-6 col-12">
+                <label for="mobile" class="form-label">Mobile</label>
+                <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="+xxx xxxx xxx" pattern="[0-9]{10}" required>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-12 col-12">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <label for="message" class="form-label">Leave us a message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+        </div>
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <button type="submit" class="btn btn-primary">Send</button>
+                <button type="reset" class="btn btn-secondary">Reset</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<%- include('footer'); -%>

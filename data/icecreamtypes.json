@@ -1,0 +1,44 @@
+{
+  "icecreamtypes": [
+    {
+      "id": "0",
+      "name": "Vanilla"
+    },
+    {
+      "id": "1",
+      "name": "Chocolate"
+    },
+    {
+      "id": "2",
+      "name": "Strawberry"
+    },
+    {
+      "id": "3",
+      "name": "Mint Chocolate Chip"
+    },
+    {
+      "id": "4",
+      "name": "Cookies and Cream"
+    },
+    {
+      "id": "5",
+      "name": "Rocky Road"
+    },
+    {
+      "id": "6",
+      "name": "Butter Pecan"
+    },
+    {
+      "id": "7",
+      "name": "Coffee"
+    },
+    {
+      "id": "8",
+      "name": "Cookie Dough"
+    },
+    {
+      "id": "9",
+      "name": "Chocolate Chip Cookie Dough"
+    }
+  ]
+}

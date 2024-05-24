@@ -1,0 +1,66 @@
+<%- include('header'); -%>
+
+    <header>
+        <div class="container-fluid bg-info-subtle mb-4">
+            <div class="col-sm-8 mx-auto text-center py-2">
+                <h1 class="display-4">World of Ice Cream</h1>
+                <p class="lead ">Feedback from ice cream lovers....</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>
+                <%= title %>
+            </h2>
+            
+                <% if (searchValue !== null) { %>
+                    <p>Below is a list of feedback from the database using the search term <span class="text-danger">'<%= searchValue %>'</span> </p>
+                <% } %>
+
+                    <% if (feedbackList.length> 0) { %>
+                        <table class="table table-bordered">
+                            <thead class="thead-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Name</th>
+                                    <th>Ice Cream Type</th>
+                                    <th>Rating</th>
+                                    <th>Feedback</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% feedbackList.forEach(feedback=> { %>
+                                    <tr>
+                                        <td>
+                                            <%= feedback.id %>
+                                        </td>
+                                        <td>
+                                            <%= feedback.name %>
+                                        </td>
+                                        <td>
+                                            <%= feedback.icecreamtype %>
+                                        </td>
+                                        <td>
+                                            <% for (let i=0; i < feedback.rating; i++) { %>
+                                                <span>&#9733;</span>
+                                                <% } %>
+                                        </td>
+                                        <td>
+                                            <%= feedback.feedback %>
+                                        </td>
+                                    </tr>
+                                    <% }); %>
+                            </tbody>
+                        </table>
+                        <% } else { %>
+                            <p>No feedback.</p>
+                            <% } %>
+
+                                <div class="mt-4 text-left">
+                                    <a href="/" class="btn btn-primary">Return to Form</a>
+                                </div>
+        </div>
+    </main>
+    <%- include('footer'); -%>

@@ -1,0 +1,32 @@
+<%- include('header'); -%>
+    <%- include('navbar'); -%>
+
+    <div class="container mt-5">
+        <h2 class="text-center mb-5">Log In</h2>
+        <% if (typeof error !== 'undefined' && error) { %>
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <form action="/user/login" method="POST">
+            <!-- Contact Details -->
+            <div class="row mb-4">
+                <div class="col-md-6 col-12">
+                    <label for="logincd" class="form-label">Login CD</label>
+                    <input type="text" class="form-control" id="login_cd" name="login_cd" required>
+                </div>
+                <div class="col-md-6 col-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" name="password" required>
+                </div>
+            </div>
+            <div class="text-center mt-3 py-3">
+                <button type="submit" class="btn btn-primary">Log in</button><br><br>
+                Don't have an account? <a href="/user/registration" class="fw-bold">Sign up here</a>.
+
+            </div>
+        </form>
+    </div>
+
+
+            <%- include('footer'); -%>

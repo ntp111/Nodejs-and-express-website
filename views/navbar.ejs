@@ -1,0 +1,81 @@
+	<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg bg-subtle">
+			<div class="container-fluid">
+				<a class="navbar-brand text-dark jersey-20-charted-regular" href="/">
+					<h1>NORIMONO</h1>
+				</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+					data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+					aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="/product/motorcycles">Motorcycles</a>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link text-secondary dropdown-toggle" href="#" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Collections</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/product/menCollections">Men</a></li>
+								<li><a class="dropdown-item" href="/product/womenCollections">Women</a></li>
+								<li><a class="dropdown-item" href="/product/kidsCollections">Kids</a></li>
+							</ul>
+						</li>
+						<li class="nav-item dropdown">
+							<a class="nav-link text-secondary dropdown-toggle" href="#" role="button"
+								data-bs-toggle="dropdown" aria-expanded="false">Owners</a>
+							<ul class="dropdown-menu">
+								<li><a class="dropdown-item" href="/service/insurance">Warranty & Insurance</a></li>
+								<li><a class="dropdown-item" href="/service/bookService">Book a service</a></li>
+							</ul>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="/service/news">News</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="/service/dealers">Dealers</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-secondary" href="/service/contact">Contact</a>
+						</li>
+
+						<% if (!user) { %>
+							<li class="nav-item">
+								<a class="nav-link text-secondary" href="/user/registration">Join Us</a>
+							</li>
+						<% } %>
+					</ul>
+					<ul class="navbar-nav mb-2 mb-lg-0">
+						<li class="nav-item">
+							<form class="d-flex" role="search" action="/product/search" method="post">
+								<input class="form-control me-2" type="search" placeholder="Quick product search" name="keyword" aria-label="Search">
+								<button class="btn btn-outline-secondary" type="submit" ><span
+										class="material-symbols-outlined navbarSearchIcon">search</span></button>
+							</form>
+						</li>
+						<% if (user) { %>
+							<li class="nav-item dropdown ml-2">
+								<div class="mx-3" href="#" id="userDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+									<img src="/images/userIcon.png"  width="50" alt="User Icon" class="user-icon">
+								</div>
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+									<li><a class="dropdown-item" href="/#"><%= user.name %></a></li><hr>
+									<li><a class="dropdown-item" href="/service/events">Events</a></li>
+									<li><a class="dropdown-item" href="/user/purchase-history">Purchase History</a></li>
+									<li><a class="dropdown-item" href="/user/logout">Log out</a></li>
+								</ul>
+							</li>
+						<% } else { %>
+							<li>
+								<button class="btn btn-outline-secondary mx-3" style="height: 49px;" type="button" onclick="window.location.href='/user/login';">Log in</button>
+							</li>
+						<% } %>
+
+					</ul>
+
+				</div>
+			</div>
+		</nav>
+
